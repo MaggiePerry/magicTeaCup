@@ -1,2 +1,2 @@
 # magicTeaCup
-personal website
+Custom Wordpress Theme
