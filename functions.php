@@ -4,12 +4,16 @@ function magicteacup_theme_support() {
     // Add dynamic title tag support
     add_theme_support('title-tag');
 
-    // Add logo
+    // Add custom logo support
     add_theme_support('custom-logo');
+
+    // Add featured image to posts
+    add_theme_support('post_thumbnails');
 }
 
 add_action('after_setup_theme', 'magicteacup_theme_support');
 
+// Function to initalize menu configuration in wp-admin
 function magicteacup_menus() {
     $locations = array(
         'primary'   => "Main Menu",
