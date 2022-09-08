@@ -1,0 +1,97 @@
+.homepage {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 136px);
+    background: linear-gradient(-45deg, var(--marigold), var(--big-dip-oruby), var(--clear-blue), var(--bright-teal));
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: gradient-bg 10s ease infinite;
+}
+
+.homepage .title {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(-45deg, var(--marigold), var(--big-dip-oruby), var(--clear-blue), var(--bright-teal));
+    background-size: 400%;
+    background-position: 400%;
+    animation: gradient-bg 10s ease infinite;
+}
+
+.homepage .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../../images/wave.png);
+    background-size: 1000px 100px;
+}
+
+@keyframes gradient-bg  {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.homepage .water {
+    animation: wave 5s linear infinite;
+    z-index: 100;
+    opacity: .8;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+
+.homepage .water:nth-child(2) {
+    animation: opposite-wave 5s linear infinite;
+    z-index: 99;
+    opacity: .4;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+
+.homepage .water:nth-child(3) {
+    animation: wave 10s linear infinite;
+    z-index: 98;
+    opacity: .2;
+    animation-delay: -5s;
+    bottom: 15px;
+}
+
+.homepage .water:nth-child(4) {
+    animation: opposite-wave 3s linear infinite;
+    z-index: 97;
+    opacity: .6;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes wave {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes opposite-wave {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
